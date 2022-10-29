@@ -1,0 +1,164 @@
+
+/* root colors and fonts */
+:root {
+    --color-pink: #EF476F;
+    --color-yellow: #FFD166;
+    --color-green: #06D6A0;
+    --color-blue: #118AB2;
+    --color-navy: #073B4C; 
+    --font-serif: 'Poppins', sans-serif;
+}
+
+/* a modern css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* start custom css */
+
+body {
+    font-family: var(--font-serif);
+}
+
+/* jumbotron start */
+.jumbotron {
+    background-image: url('./jumbotron_bg.jpg');
+    background-color: var(--color-blue);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 75px;
+
+}
+
+.jumbotron h1 {
+    font-weight: 800;
+    align-content: center;
+    text-align: center;
+    margin-top: 200px;
+    color: var(--color-navy);
+    
+}
+
+.jumbotron img {
+    width: 6em;
+}
+/* jumbotron end */
+
+/* header start */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+      padding: 10px 16px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+header a:hover {
+    color: var(--color-blue);
+}
+
+.disappear {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+/* about section start */
+.about {
+    height: 100000px;
+}

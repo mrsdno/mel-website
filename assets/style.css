@@ -6,6 +6,7 @@
     --color-green: #06D6A0;
     --color-blue: #118AB2;
     --color-navy: #073B4C; 
+    --color-white: #FFFFFF;
     --font-serif: 'Poppins', sans-serif;
 }
 
@@ -96,6 +97,7 @@ body {
 .jumbotron {
     background-image: url('./jumbotron_bg.jpg');
     background-color: var(--color-blue);
+    height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,31 +105,39 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 75px;
-
+    font-size: 4rem;
+    position: relative
 }
 
 .jumbotron h1 {
     font-weight: 800;
     align-content: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 10vh;
     color: var(--color-navy);
-    
 }
 
-.jumbotron img {
-    width: 6em;
+.picture {
+    width: 60vw;
+    max-width: 100%;
+    height: auto; 
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 0;
 }
+
 /* jumbotron end */
 
 /* header start */
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
       padding: 10px 16px;
+      background-color: var(--color-white);
 }
 
 header a {
@@ -142,7 +152,7 @@ header a:hover {
 
 .disappear {
 opacity: 0;
-transition: opacity 0.5s ease-in-out;
+transition: opacity 0.5s ease-in;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */

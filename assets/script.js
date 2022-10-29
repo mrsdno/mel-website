@@ -25,7 +25,7 @@ var artistPicture = document.getElementById("artistPicture");
 // Make name in jumbotron disappear
 window.addEventListener("scroll", () => {
   var y = window.scrollY;
-  if (y >= 10) {
+  if (y >= 300) {
       artistName.classList.add("disappear");
       artistPicture.classList.add("disappear");
     return;

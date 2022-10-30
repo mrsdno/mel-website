@@ -1,13 +1,12 @@
-
 /* root colors and fonts */
 :root {
-    --color-pink: #EF476F;
-    --color-yellow: #FFD166;
-    --color-green: #06D6A0;
-    --color-blue: #118AB2;
-    --color-navy: #073B4C; 
-    --color-white: #FFFFFF;
-    --font-serif: 'Poppins', sans-serif;
+  --color-pink: #ef476f;
+  --color-yellow: #ffd166;
+  --color-green: #06d6a0;
+  --color-blue: #118ab2;
+  --color-navy: #073b4c;
+  --color-white: #ffffff;
+  --font-serif: "Poppins", sans-serif;
 }
 
 /* a modern css reset */
@@ -34,8 +33,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -74,9 +73,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -90,41 +89,41 @@ select {
 /* start custom css */
 
 body {
-    font-family: var(--font-serif);
+  font-family: var(--font-serif);
 }
 
 /* jumbotron start */
 .jumbotron {
-    background-image: url('./jumbotron_bg.jpg');
-    background-color: var(--color-blue);
-    height: 95vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 4rem;
-    position: relative
+  background-image: url("./jumbotron_bg.jpg");
+  background-color: var(--color-blue);
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  position: relative;
 }
 
 .jumbotron h1 {
-    font-weight: 800;
-    align-content: center;
-    text-align: center;
-    margin-top: 10vh;
-    color: var(--color-navy);
+  font-weight: 800;
+  align-content: center;
+  text-align: center;
+  margin-top: 10vh;
+  color: var(--color-navy);
 }
 
 .picture {
-    width: 60vw;
-    max-width: 100%;
-    height: auto; 
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    bottom: 0;
+  width: 60vw;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  bottom: 0;
 }
 
 /* jumbotron end */
@@ -132,34 +131,34 @@ body {
 /* header start */
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-      padding: 10px 16px;
-      background-color: var(--color-white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: var(--color-white);
 }
 
 header a {
-    text-decoration: none;
-    color: var(--color-navy);
-    font-weight: 600;
+  text-decoration: none;
+  color: var(--color-navy);
+  font-weight: 600;
 }
 
 header a:hover {
-    color: var(--color-blue);
+  color: var(--color-blue);
 }
 
 .disappear {
-opacity: 0;
-transition: opacity 0.5s ease-in;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -167,8 +166,80 @@ transition: opacity 0.5s ease-in;
   padding-top: 102px;
 }
 
-
 /* about section start */
 .about {
-    height: 100000px;
+  display: flex;
+}
+
+.about-imgs-wrapper {
+  background-color: var(--color-pink);
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-imgs {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 0.25fr;
+}
+
+.about-imgs img {
+  border-radius: 20%;
+  padding: 0.2rem;
+}
+
+.image-one {
+  z-index: 3;
+  grid-column: 3 / 5;
+  grid-row: 2 / 5;
+}
+
+.image-two {
+  z-index: 2;
+  grid-column: -2 / -4;
+    grid-row: 3 / 5;
+    margin-top: -30px;
+    margin-left: -20px;
+}
+
+.image-three {
+  z-index: 1;
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.image-two:hover, .image-three:hover {
+    z-index: 4;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .about-imgs-wrapper {
+    width: 100vw;
+    height: 60vh;
+  }
+
+.about-imgs {
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.25fr 0.5fr 0.5fr 0.25fr;
+}
+.image-two {
+    grid-row: 3 / 5;
+    margin-top: -50px;
+    margin-left: -20px;
+}
+
+.image-three {
+  grid-row: 2 / 5;
+  margin-top: 50px;
+}
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
 }

@@ -93,8 +93,8 @@ select {
 @media (min-width: 600px) {
   :root {
     --fs-xl: 5rem;
-    --fs-600: 2.5rem;
-    --fs-400: 1.125rem;
+    --fs-600: 4rem;
+    --fs-400: 1.5rem;
   }
 }
 
@@ -116,7 +116,7 @@ p {
 
 /* jumbotron start */
 .jumbotron {
-  background-image: url("./jumbotron_bg.jpg");
+  background-image: url("./images/jumbotron_bg.jpg");
   background-color: var(--color-blue);
   height: 95vh;
   background-position: center;
@@ -248,7 +248,7 @@ header a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 5px;
+  padding: 10px 5vw;
   color: var(--color-navy);
 }
 
@@ -260,8 +260,6 @@ header a:hover {
   line-height: 1.7;
   margin-bottom: 1rem;
 }
-
-
 
 /* paintings section start */
 
@@ -307,7 +305,6 @@ header a:hover {
   .imgs-wrapper,
   .text-content {
     width: 100vw;
-    height: 50vh;
   }
 
   .about-imgs {
@@ -324,4 +321,5 @@ header a:hover {
     grid-row: 2 / 5;
     margin-top: 50px;
   }
+ 
 }

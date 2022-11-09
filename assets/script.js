@@ -26,11 +26,25 @@ var artistPicture = document.getElementById("artistPicture");
 window.addEventListener("scroll", () => {
   var y = window.scrollY;
   if (y >= 300) {
-      artistName.classList.add("disappear");
-      artistPicture.classList.add("disappear");
+    artistName.classList.add("disappear");
+    artistPicture.classList.add("disappear");
     return;
   } else {
     artistName.classList.remove("disappear");
     artistPicture.classList.remove("disappear");
   }
+});
+
+$(document).on("ready", function () {
+  $(".multiple-items").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 0,
+    // speed: 10000,
+    // cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
 });
